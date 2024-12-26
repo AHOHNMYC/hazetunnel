@@ -18,6 +18,7 @@ func main() {
 	flag.StringVar(&Flags.UserAgent, "user_agent", "", "Override the User-Agent header for incoming requests. Optional.")
 	flag.StringVar(&api.Config.Cert, "cert", "cert.pem", "TLS CA certificate (generated automatically if not present)")
 	flag.StringVar(&api.Config.Key, "key", "key.pem", "TLS CA key (generated automatically if not present)")
+	flag.StringVar(&Flags.UpstreamProxy, "upstream_proxy", "", "Upstream")
 	flag.BoolVar(&api.Config.Verbose, "verbose", false, "Enable verbose logging")
 	flag.Parse()
 	// Set ID
