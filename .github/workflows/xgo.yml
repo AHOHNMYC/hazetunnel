@@ -35,7 +35,7 @@ jobs:
       - name: Upload CFFI Build Artifacts to Workflow
         uses: actions/upload-artifact@v3
         with:
-          name: cffi-build-artifacts-${{ env.VERSION }}
+          name: cffi-build-artifacts
           path: hazetunnel/cffi_dist/**
 
       - name: Upload Release Assets with action-gh-release
