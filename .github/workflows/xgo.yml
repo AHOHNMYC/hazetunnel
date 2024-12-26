@@ -33,18 +33,10 @@ jobs:
           working_dir: hazetunnel
 
       - name: Upload CFFI Build Artifacts to Workflow
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: cffi-build-artifacts
           path: hazetunnel/cffi_dist/**
-
-      - name: Upload Release Assets with action-gh-release
-        uses: softprops/action-gh-release@v1
-        with:
-          files: hazetunnel/cffi_dist/*
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
 
 permissions:
   contents: write
